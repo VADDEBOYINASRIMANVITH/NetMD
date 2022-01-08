@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pre Processing</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <style>
+.jumbotron {
+    padding-top: 25px;
+     padding-bottom: 25px;
+     padding-right: 25px;
+     padding-left: 25px;
+     background-color:#f7f7ed;
+
+}
+  </style>
+</head>
+<body>
+<font color="#006699">
+    <br>
+ <h1><i><p style="text-align:center">Data Pre-processing </p></i></h1>
+ </font>
+<br>
+<div class="container">
+     <div class="jumbotron" style="text-align: center;border: 3px solid black;border-radius: 20px">
+<div class="container">
+<form action="{%  url 'preprocessing' %}" method="POST">
+<label><b>Choose your File : </b></label>
+<select name="filename">
+    <option selected disabled>Choose One:</option>
+      {% for d in data %}
+            <option>{{ d.file_name }}</option>
+        {% endfor %}
+    </select>
+{% csrf_token %}
+&nbsp;&nbsp;
+ &nbsp;&nbsp;<button type="submit" class="btn btn-primary" value=submit">Submit</button>
+</form>
+</div>
+<br>
+<div class="container">
+<form action="{%  url 'SB' %}" method="POST">
+<label><b>Choose your Pre-processing Type : </b></label>
+<select name="sb">
+    <option selected disabled>Choose One:</option>
+    <option>Standard Scaler</option>
+    <option>Min Max Scaler</option>
+    <option>Smote</option>
+    <option>Under Sampling</option>
+    <option>Over Sampling</option>
+    <option>Standard Scaler and Smote</option>
+    <option>Standard Scaler and Under Sampling</option>
+    <option>Standard Scaler and Over Sampling</option>
+    <option>Min Max Scaler and Smote</option>
+    <option>Min Max Scaler and Under Sampling</option>
+    <option>Min Max Scaler and Over Sampling</option>
+</select>
+&nbsp;&nbsp;
+    {% csrf_token %}
+ &nbsp;&nbsp;<button type="submit" class="btn btn-dark" value=submit">Submit</button>
+</form>
+
+
+    <br><br>&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="/" class="btn btn-success" role="button" >Back</a>
+    </div>
+
+         </div>
+    </div>
+
+
+</body>
+</html>

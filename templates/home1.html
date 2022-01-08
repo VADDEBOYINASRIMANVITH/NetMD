@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NetMD Framework</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <style>
+    .card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+.jumbotron {
+    padding-top: 25px;
+     padding-bottom: 25px;
+     padding-right: 25px;
+     padding-left: 25px;
+     background-color:#f7f7ed;
+
+}
+  </style>
+</head>
+<body>
+<br>
+
+<font color="#006699"><br>
+ <h1><i><p style="text-align:center">Network Malware Detection</p></i></h1>
+ </font>
+<br>
+
+<div class="container col-12">
+<!--  <div class="jumbotron" style="border: 2px solid black;border-radius: 30px">-->
+
+
+     <div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card" h-100>
+      <img src="{%static 'images/pic1.jpeg' %}" class="card-img-top embed-responsive-item" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Data Ingestion</h5>
+        <p class="card-text">Load Your Data Here...</p>
+  <div class="card-footer text-center">
+    <a class="btn btn-success" href="ingestion" role="button">Launch</a>
+    </div>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card" h-100>
+       <img src="{%static 'images/pic2.jpeg' %}" class="card-img-top embed-responsive-item" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Exploratory Analysis</h5>
+        <p class="card-text">Explore Your Data Here....</p>
+  <div class="card-footer text-center">
+    <a class="btn btn-success" href="exploratory" role="button">Launch</a>
+    </div>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card" h-100>
+       <img src="{%static 'images/pic3.jpg' %}" class="card-img-top embed-responsive-item" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Data Pre-Processing</h5>
+        <p class="card-text">Pre-Process your Data Here...</p>
+  <div class="card-footer text-center">
+    <a class="btn btn-success" href="preprocessing" role="button">Launch</a>
+    </div>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card" h=-100>
+       <img src="{%static 'images/pic4.jpeg' %}" class="card-img-top embed-responsive-item" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Training the Model.</h5>
+        <p class="card-text">Choose the Machine Learning Algorithm...</p>
+  <div class="card-footer text-center">
+    <a class="btn btn-success" href="algo" role="button">Launch</a>
+    </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--  </div>-->
+</div>
+
+</body>
+</html>

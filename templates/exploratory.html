@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exploratory Analysis</title>
+
+</head>
+<body>
+<br>
+
+<font color="#006699">
+    <br>
+ <h1><i><p style="text-align:center">Exploratory Analysis</p></i></h1> <br>
+ </font>
+ <div class="container">
+     <div class="jumbotron" style="text-align: center;border: 3px solid black;border-radius: 20px">
+<div class="container">
+<form action="{%  url 'exploratory' %}" method="POST">
+<label><b>Choose your File : </b></label>
+<select name="filename">
+    <option value="disabled">Choose One</option>
+      {% for d in data %}
+            <option>{{ d.file_name }}</option>
+        {% endfor %}
+    </select>
+{% csrf_token %}
+       &nbsp;&nbsp;
+ <button type="submit" class="btn btn-primary" value=submit">Submit</button> <br><br>
+
+    <form action="{% url 'graph' %}" >
+        <a href="/graph" class="btn btn-info" role="button" >Visualize</a>
+    </form>
+
+<!--    <a href="/visualize" class="btn btn-warning" role="button" >Visualize Dataset</a>-->
+    <br>
+    <a href="/" class="btn btn-success" role="button" >Back</a>
+</form>
+</div>
+         </div>
+     </div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<footer>
+<div style="text-align: center;background-color: black;color: white;margin-top: 5px;margin-bottom: 5px">
+<p style="padding-top: 5px;padding-bottom: 5px"> Copyrights © 2021 | All rights reserved by TCS Ltd</p>
+</div>
+</footer>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

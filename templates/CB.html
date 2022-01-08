@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <br>
+    <div class="jumbotron">
+        <h3 style="margin-top: 10px;margin-bottom: 20px;color: dodgerblue">CatBoost</h3>
+
+        </p>
+        </div>
+    </div>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <div class="container">
+
+        <h4 style="border-bottom: 2px solid black;color: green;margin-right: 850px">Classification Metrics</h4>
+        <h5>Accuracy score : {{ accuracy_cb }}</h5><br>
+        <h5>Mean Squared Error (MSE) : {{ mse_cb }}</h5><br>
+        <h5>Root Mean Squared Error (RMSE) : {{ rmse_cb }}</h5><br>
+        <h5>Mean Absolute Error (MAE): {{ mae_cb }}</h5><br>
+        <h5>R<sup>2</sup> score : {{ rsquared_cb }}</h5><br>
+
+
+    <h4 style="border-bottom: 2px solid black;color: green;margin-right: 630px">Confusion Matrix Visual Representation</h4>
+        <img src="{% static 'cm/cb.png' %}">
+    <br>
+    <br>
+    <br>
+
+        <br>
+        <br>
+
+<div class="container-fluid" style="text-align: center">
+<a href="/algo" class="btn btn-warning" role="button">Back</a>
+<br><br>
+</div>
+
+    <br>
+    <br>
+
+
+ </div>
+<div style="text-align: center;background-color: black;color: white;margin-top: 5px;margin-bottom: 5px">
+<p style="padding-top: 5px;padding-bottom: 5px"> Copyrights © 2021 | All rights reserved by TCS Ltd</p>
+</div>
+</div>
+</body>
+</html>

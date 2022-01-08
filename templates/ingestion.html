@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>NetMD Framework</title>
+  </head>
+  <body>
+  <br>
+ <font color="#006699">
+ <h1><i><p style="text-align:center">Data Ingestion</p></i></h1>
+ </font>
+<div class="container mt-5">
+    <form enctype="multipart/form-data" action="{%  url 'home-page' %}" method="POST">
+        <div class="form-group">
+             <label for="{{ form.file_name.id_for_label }}">File Name</label>
+             {{ form.file_name }}
+        </div>
+
+        <div class="form-group">
+             <label for="{{ form.files_data.id_for_label }}">File</label>
+             {{ form.files_data }}
+        </div>
+
+        {% csrf_token %}
+        <button type="submit" class="btn btn-primary">Submit</button> &nbsp;&nbsp;
+        <a href="view" class="btn btn-info" role="button">View Files</a>
+
+    </form>
+    <br>
+
+
+    <br>
+
+    <br>
+    <a href="/" class="btn btn-success" role="button">Back</a>
+
+
+</div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  </body>
+</html>
